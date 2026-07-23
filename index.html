@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradyumna Shetty | Data Engineering & Cloud Analytics Portfolio</title>
+    <meta name="description" content="Portfolio of Pradyumna Shetty, a Data Engineering professional with 4 years of experience specializing in SQL, ETL/ELT pipelines, GCP, Python, and analytics.">
+    <meta name="keywords" content="Data Engineer, GCP, BigQuery, DBT, SQL, Python, ETL, ELT, Portfolio, Pradyumna Shetty">
+    <meta name="author" content="Pradyumna Shetty">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pradyumna Shetty | Data Engineering Portfolio">
+    <meta property="og:description" content="Data Engineering professional with 4 years of experience managing the enterprise data lifecycle using SQL, GCP, Python, and DBT.">
+    <meta property="og:url" content="https://github.com/Pradyumna047">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Grid Effect -->
+    <div class="grid-background"></div>
+    <div class="glow-orb" id="orb-1"></div>
+    <div class="glow-orb" id="orb-2"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="logo" id="nav-logo">
+                <span class="logo-accent">&lt;</span>PS<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active-link" id="link-hero">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+                    <li><a href="#skills" class="nav-link" id="link-skills">Skills</a></li>
+                    <li><a href="#experience" class="nav-link" id="link-experience">Experience</a></li>
+                    <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link" id="link-certifications">Certificates</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="cta-button nav-cta" id="nav-cta-btn">Get In Touch</a>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container container">
+                <div class="hero-content scroll-reveal">
+                    <div class="badge-accent">Available for Opportunities</div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Pradyumna Shetty</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text" id="roles-typewriter">Data Engineering Specialist</span>
+                    </h2>
+                    <p class="hero-description">
+                        I am a Data Engineering professional with <strong>4 years</strong> of industry experience managing enterprise data lifecycles. I specialize in building scalable ELT/ETL pipelines, modern data modeling, data orchestration, and cloud data warehousing on GCP.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="primary-btn ripple" id="hero-view-work">
+                            View Work <i class="fa-solid fa-arrow-right icon-space"></i>
+                        </a>
+                        <a href="#contact" class="secondary-btn ripple" id="hero-contact">
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/pradyumna-shetty-534a14132/" target="_blank" rel="noopener" class="social-icon" id="hero-linkedin" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Pradyumna047" target="_blank" rel="noopener" class="social-icon" id="hero-github" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:pradyumnashetty1998@gmail.com" class="social-icon" id="hero-email" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual scroll-reveal">
+                    <div class="abstract-graphic">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                        <div class="center-core">
+                            <img src="profile.jpg" alt="Pradyumna Shetty" class="profile-img">
+                        </div>
+                        <!-- Floating Tech Nodes -->
+                        <div class="node node-python" title="Python"><i class="fa-brands fa-python"></i></div>
+                        <div class="node node-gcp" title="Google Cloud Platform"><i class="fa-brands fa-google"></i></div>
+                        <div class="node node-database" title="SQL & Databases"><i class="fa-solid fa-server"></i></div>
+                        <div class="node node-code" title="Data Warehousing"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="node node-ai" title="Artificial Intelligence & GenAI"><i class="fa-solid fa-brain"></i></div>
+                        <div class="node node-analytics" title="Data Analytics"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="node node-bi" title="Business Intelligence (BI)"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="node node-modelling" title="Data Modelling"><i class="fa-solid fa-cubes"></i></div>
+                        <div class="node node-cloud" title="Cloud Computing"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="node node-pipeline" title="Data Pipelines & ETL"><i class="fa-solid fa-filter"></i></div>
+                        <div class="node node-linux" title="Linux OS"><i class="fa-brands fa-linux"></i></div>
+                        <div class="node node-creative" title="Creative Thinking & Problem Solving"><i class="fa-solid fa-lightbulb"></i></div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down-indicator" id="scroll-down" aria-label="Scroll to About Section">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrows">
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container scroll-reveal">
+                <div class="section-header text-center">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">My background, values, and educational journey</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3 class="about-heading">Transforming raw data into actionable enterprise intelligence</h3>
+                        <p class="about-text">
+                            I am a results-driven professional skilled in SQL, ETL/ELT, CI/CD, dbt, Python, and GCP. My hands-on expertise spans data modeling, scalable pipeline development, data orchestration, and cloud analytics. I possess a deep understanding of structured, unstructured, and relational databases.
+                        </p>
+                        <p class="about-text">
+                            Currently, I am in my final semester pursuing a <strong>Master of Engineering</strong> in Information Technology at <strong>Hochschule Wismar</strong> (Germany). I am highly adaptable and passionate about solving complex data challenges to drive business growth through reliable, production-grade solutions.
+                        </p>
+                        
+                        <div class="about-meta-grid">
+                            <div class="meta-item">
+                                <span class="meta-label">Location:</span>
+                                <span class="meta-value">Wismar, Deutschland</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Language:</span>
+                                <span class="meta-value">English (Fluent), German (B1)</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Email:</span>
+                                <span class="meta-value"><a href="mailto:pradyumnashetty1998@gmail.com">pradyumnashetty1998@gmail.com</a></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Phone:</span>
+                                <span class="meta-value"><a href="tel:+4915510823198">+49 15510823198</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-card-container">
+                        <h3 class="about-heading"><i class="fa-solid fa-graduation-cap icon-space"></i> Education</h3>
+                        <div class="education-timeline">
+                            <div class="edu-item">
+                                <div class="edu-dot"></div>
+                                <span class="edu-date">10/2024 - 03/2027 (Expected)</span>
+                                <h4 class="edu-degree">Master of Engineering: Information and Electrical Engineering</h4>
+                                <p class="edu-school">Hochschule Wismar, Wismar, Germany</p>
+                                <p class="edu-detail">Specialization: Information Technology | <strong>CGPA: 1.5</strong></p>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-dot"></div>
+                                <span class="edu-date">08/2016 - 09/2020</span>
+                                <h4 class="edu-degree">Bachelor of Engineering: Electronics and Communication Engineering</h4>
+                                <p class="edu-school">Dayananda Sagar College of Engineering, Bengaluru, India</p>
+                                <p class="edu-detail"><strong>CGPA: 2.0</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container scroll-reveal">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">My professional toolbox for data and software engineering</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Programming -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon-wrapper"><i class="fa-solid fa-code"></i></div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-badge">Python <span class="skill-level">(Pandas, NumPy, Matplotlib)</span></span></li>
+                            <li><span class="skill-badge">SQL <span class="skill-level">(PostgreSQL, MySQL, SQLite)</span></span></li>
+                            <li><span class="skill-badge">Bash Scripting</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon-wrapper"><i class="fa-cloud fa-solid"></i></div>
+                            <h3>Cloud Analytics (GCP)</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-badge">BigQuery</span></li>
+                            <li><span class="skill-badge">Cloud Storage (GCS)</span></li>
+                            <li><span class="skill-badge">Cloud Composer <span class="skill-level">(Airflow)</span></span></li>
+                            <li><span class="skill-badge">Dataproc <span class="skill-level">(Spark)</span></span></li>
+                            <li><span class="skill-badge">Cloud Shell</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Big Data & Pipelines -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon-wrapper"><i class="fa-solid fa-database"></i></div>
+                            <h3>Big Data & Modeling</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-badge">ETL / ELT Architecture</span></li>
+                            <li><span class="skill-badge">dbt (data build tool)</span></li>
+                            <li><span class="skill-badge">OLAP & OLTP Design</span></li>
+                            <li><span class="skill-badge">Dimensional Modeling</span></li>
+                            <li><span class="skill-badge">Data Reconciliation</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps & BI -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon-wrapper"><i class="fa-solid fa-sliders"></i></div>
+                            <h3>DevOps & BI Tools</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-badge">Git & GitHub</span></li>
+                            <li><span class="skill-badge">CI/CD Pipelines</span></li>
+                            <li><span class="skill-badge">Docker Containers</span></li>
+                            <li><span class="skill-badge">Power BI <span class="skill-level">(DAX)</span></span></li>
+                            <li><span class="skill-badge">Excel (Advanced)</span></li>
+                            <li><span class="skill-badge">Jira & Confluence</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="experience-section" id="experience">
+            <div class="container scroll-reveal">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">A look into my professional roles and impact</p>
+                </div>
+
+                <div class="experience-timeline-container">
+                    <!-- Exp 1 -->
+                    <div class="exp-card-wrapper">
+                        <div class="exp-badge">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Data Engineering, Management & Governance Analyst</h3>
+                                    <h4 class="exp-company">Accenture — Bengaluru, India</h4>
+                                    <span class="exp-project"><i class="fa-solid fa-cube icon-space"></i> Project: Accelerate - O2</span>
+                                </div>
+                                <span class="exp-duration">06/2022 - 09/2024</span>
+                            </div>
+                            <ul class="exp-points">
+                                <li>Achieved <span class="highlight">100% data integrity</span> between legacy and cloud systems by developing and managing GCP data models and schemas during a multi-terabyte Oracle/DB2/MySQL to BigQuery migration.</li>
+                                <li>Cut manual validation effort by <span class="highlight">80%</span> and eliminated post-migration inconsistencies by building an automated MySQL-based reconciliation framework into the CDC pipeline.</li>
+                                <li>Reduced ELT runtime from 3 hours to 10 minutes (a <span class="highlight">90% scalability gain</span>) by replacing legacy ETL logic with GCP-native dbt models.</li>
+                                <li>Cut query runtime by <span class="highlight">over 50%</span> by refactoring legacy multi-table SQL joins, aggregations, and window functions using indexing, CTEs, and execution-plan analysis.</li>
+                                <li>Reduced data loss by <span class="highlight">75%</span> and increased reporting completeness by engineering a late-arriving data recovery framework.</li>
+                                <li>Secured <span class="highlight">95% customer retention</span> through data-driven restructuring of the upfront discount algorithm, analyzing time-series data of monthly transformed raw data to isolate key financial KPIs.</li>
+                                <li>Eliminated operational delays by building secure, SFTP-based automated file ingestion pipelines in Bash into GCS.</li>
+                                <li>Delivered projects on time by managing workflows using <span class="highlight">Agile methodologies</span> with cross-functional teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp 2 -->
+                    <div class="exp-card-wrapper">
+                        <div class="exp-badge">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Application Development Associate</h3>
+                                    <h4 class="exp-company">Accenture — Bengaluru, India</h4>
+                                    <span class="exp-project"><i class="fa-solid fa-cube icon-space"></i> Project: Nucleus - O2</span>
+                                </div>
+                                <span class="exp-duration">01/2021 - 05/2022</span>
+                            </div>
+                            <ul class="exp-points">
+                                <li>Enforced data quality, security, and usage policies by applying business metadata rules and governing master data through an MDM framework feeding unified profiles into a Customer Data Platform (CDP).</li>
+                                <li>Enabled large-scale reporting by creating Ab Initio ETL graphs to ingest <span class="highlight">14TB of batch data</span> onto HDFS from multiple databases and CSV files.</li>
+                                <li>Cut manual intervention by <span class="highlight">15%</span> by implementing optimized, configuration-driven parameter sets.</li>
+                                <li>Reduced downstream reporting failures and cut manual KPI validation effort by <span class="highlight">20%</span> by resolving large-scale data inconsistencies using SQL and Python.</li>
+                                <li>Improved ETL execution speed by <span class="highlight">65%</span> and reduced bottlenecks by optimizing workflows and backend processing logic.</li>
+                                <li>Enabled seamless production delivery of complex data pipelines by deploying a multi-container <span class="highlight">Apache Airflow</span> environment using Docker.</li>
+                                <li>Improved data quality by <span class="highlight">25%</span> by implementing a reconciliation and reprocessing framework for SCD-2.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-section" id="projects">
+            <div class="container scroll-reveal">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Technical Projects</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">Explore my latest work across Data Engineering, ML/AI, and Analytics</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="project-filters" id="project-filters">
+                    <button class="filter-btn active" data-filter="all" id="filter-btn-all">All</button>
+                    <button class="filter-btn" data-filter="de" id="filter-btn-de">Data Engineering</button>
+                    <button class="filter-btn" data-filter="ai-ml" id="filter-btn-aiml">ML & AI</button>
+                    <button class="filter-btn" data-filter="analytics" id="filter-btn-analytics">Cloud Analytics</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: Yojana Setu -->
+                    <div class="project-card" data-category="ai-ml de analytics" id="proj-yojana-setu">
+                        <div class="project-banner bg-grad-cyan-indigo">
+                            <i class="fa-solid fa-robot banner-icon"></i>
+                            <div class="project-category-tag">GenAI & RAG</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-card-title">Yojana Setu — GenAI Welfare Assistant</h3>
+                            <p class="project-card-desc">
+                                Built a zero-hallucination RAG assistant for welfare eligibility checks by combining Vertex AI Agent Builder with Gemini Pro on complex, multi-criteria government scheme data.
+                            </p>
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Programmed edge IP geolocation that auto-detects user state and translates results.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Deployed containerized microservices on Cloud Run.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Built async audit-logging pipeline streaming to GCS.</li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">GCP Vertex AI</span>
+                                <span class="tech-tag">Cloud Run</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">RAG</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pradyumna047/yojana-setu" target="_blank" rel="noopener" class="proj-link-btn" id="link-yojana-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
+                                <a href="#" class="proj-link-btn disabled" id="link-yojana-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Neural Logic Synthesis -->
+                    <div class="project-card" data-category="ai-ml" id="proj-neural-logic">
+                        <div class="project-banner bg-grad-purple-pink">
+                            <i class="fa-solid fa-microchip banner-icon"></i>
+                            <div class="project-category-tag">Deep Learning</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-card-title">Neural Logic Synthesis</h3>
+                            <p class="project-card-desc">
+                                Replicated Boolean logic gate behavior with 100% accuracy on all truth tables by designing and training modular artificial neural networks (ANN) in TensorFlow and Keras.
+                            </p>
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Replicated Boolean logic gate behavior with 100% accuracy.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Built functional digital multiplexer by composing networks.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Scripted gate-to-circuit signal flow logic in NumPy.</li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Keras API</span>
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Supervised Learning</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pradyumna047/neural-logic-synthesis" target="_blank" rel="noopener" class="proj-link-btn" id="link-neural-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
+                                <a href="#" class="proj-link-btn disabled" id="link-neural-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Subscription Analytics -->
+                    <div class="project-card" data-category="de analytics" id="proj-sub-analytics">
+                        <div class="project-banner bg-grad-emerald-teal">
+                            <i class="fa-solid fa-chart-line banner-icon"></i>
+                            <div class="project-category-tag">Data Infrastructure</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-card-title">End-to-End Subscription Analytics</h3>
+                            <p class="project-card-desc">
+                                Modeled a simulated B2C subscription dataset by architecting a full-stack ELT pipeline using dbt and DuckDB as an OLAP engine, topped with interactive reports.
+                            </p>
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Uncovered <span class="highlight">35% revenue leakage</span> by modeling MRR & churn.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Guaranteed <span class="highlight">100% data reliability</span> using automated dbt schema tests.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Quantified <span class="highlight">€2.8M potential revenue impact</span> via Power BI & DAX.</li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">dbt</span>
+                                <span class="tech-tag">DuckDB</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">DAX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pradyumna047/subscription-analytics" target="_blank" rel="noopener" class="proj-link-btn" id="link-sub-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
+                                <a href="#" class="proj-link-btn disabled" id="link-sub-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Retail Demand Forecasting -->
+                    <div class="project-card" data-category="ai-ml analytics" id="proj-demand-forecasting">
+                        <div class="project-banner bg-grad-blue-violet">
+                            <i class="fa-solid fa-store banner-icon"></i>
+                            <div class="project-category-tag">Time Series ML</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-card-title">Retail Demand Forecasting Pipeline</h3>
+                            <p class="project-card-desc">
+                                Predicted daily sales by building a modular, production-grade time-series forecasting pipeline on 5 years of historical data using Random Forest and SARIMA.
+                            </p>
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Achieved a <span class="highlight">15% MAPE</span> via advanced rolling/lag features.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Eliminated lookahead bias with strict temporal splits.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Run stationarity checks using Augmented Dickey-Fuller tests.</li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-Learn</span>
+                                <span class="tech-tag">Statsmodels</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Time-Series</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pradyumna047/retail-forecasting" target="_blank" rel="noopener" class="proj-link-btn" id="link-retail-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
+                                <a href="#" class="proj-link-btn disabled" id="link-retail-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Languages Section -->
+        <section class="certifications-section" id="certifications">
+            <div class="container scroll-reveal">
+                <div class="cert-lang-grid">
+                    <!-- Certifications Panel -->
+                    <div class="certifications-panel">
+                        <div class="section-header">
+                            <h2 class="section-title">Certifications</h2>
+                            <div class="section-underline"></div>
+                        </div>
+                        <div class="certifications-grid">
+                            <div class="cert-card">
+                                <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4 class="cert-name">Google Cloud Data Analytics</h4>
+                                    <p class="cert-issuer">Google • 07/2026</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4 class="cert-name">Data Science Essentials in Python</h4>
+                                    <p class="cert-issuer">Cisco Networking Academy • 02/2026</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4 class="cert-name">Associate Cloud Engineer (GCP)</h4>
+                                    <p class="cert-issuer">Google • 03/2024</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4 class="cert-name">Full Stack Automation</h4>
+                                    <p class="cert-issuer">Accenture • 07/2021</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon-box"><i class="fa-solid fa-newspaper"></i></div>
+                                <div class="cert-info">
+                                    <h4 class="cert-name">IJRASET Scientific Publication</h4>
+                                    <p class="cert-issuer">Scientific Journal (Aquabin IoT Waste Management) • 09/2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Languages Panel -->
+                    <div class="languages-panel">
+                        <div class="section-header">
+                            <h2 class="section-title">Languages</h2>
+                            <div class="section-underline"></div>
+                        </div>
+                        <div class="languages-box">
+                            <div class="language-progress">
+                                <div class="lang-details">
+                                    <span class="lang-name">English</span>
+                                    <span class="lang-level">Fluent (C1)</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="language-progress">
+                                <div class="lang-details">
+                                    <span class="lang-name">German</span>
+                                    <span class="lang-level">Intermediate (B1) - Actively Developing</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container scroll-reveal">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">Let's discuss data pipelines, collaboration opportunities, or general inquiries</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards / Social links -->
+                    <div class="contact-info-panel">
+                        <h3>Contact Information</h3>
+                        <p class="contact-prompt">Feel free to reach out via email, phone, or connect on social platforms.</p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-card">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p><a href="mailto:pradyumnashetty1998@gmail.com">pradyumnashetty1998@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-card">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4>Phone Number</h4>
+                                    <p><a href="tel:+4915510823198">+49 15510823198</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-card">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Wismar, Deutschland - 23966</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-panel">
+                            <h4>Connect With Me</h4>
+                            <div class="contact-social-icons">
+                                <a href="https://www.linkedin.com/in/pradyumna-shetty-534a14132/" target="_blank" rel="noopener" class="contact-social-btn" id="contact-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/Pradyumna047" target="_blank" rel="noopener" class="contact-social-btn" id="contact-github"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel">
+                        <h3>Send a Message</h3>
+                        <form id="portfolio-contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Full Name <span class="required-star">*</span></label>
+                                    <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                                    <span class="error-msg" id="name-error">Please enter your name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email Address <span class="required-star">*</span></label>
+                                    <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                                    <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject <span class="required-star">*</span></label>
+                                <input type="text" id="contact-subject" name="subject" placeholder="Collaboration / Job Inquiry" required>
+                                <span class="error-msg" id="subject-error">Please enter a subject</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message <span class="required-star">*</span></label>
+                                <textarea id="contact-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                <span class="error-msg" id="message-error">Please enter your message</span>
+                            </div>
+                            <button type="submit" class="submit-btn ripple" id="contact-submit-btn">
+                                Send Message <i class="fa-solid fa-paper-plane icon-space-left"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <p class="copyright">&copy; 2026 Pradyumna Shetty. All rights reserved.</p>
+            <p class="footer-meta">Designed & Engineered with modern HTML, CSS, and Vanilla JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript script -->
+    <script src="script.js"></script>
+</body>
+</html>
