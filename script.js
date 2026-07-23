@@ -282,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             if (isValid) {
-                // Submit Form Simulation
                 const submitBtn = document.getElementById('contact-submit-btn');
                 const originalBtnText = submitBtn.innerHTML;
                 
@@ -290,17 +289,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-circle-notch fa-spin icon-space-left"></i>';
                 
-                setTimeout(() => {
-                    // Success Case Simulation
-                    showToast('Thank you! Your message has been sent successfully.', 'success');
-                    
-                    // Reset fields
-                    contactForm.reset();
-                    
+                // Prepare form data for Web3Forms API
+                const formData = {
+                    access_key: "56112482-1ba4-4f6c-9b60-9c0869e50b8b",
+                    name: nameInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    subject: subjectInput.value.trim(),
+                    message: messageInput.value.trim(),
+                    from_name: "Pradyumna Portfolio"
+                };
+
+                fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(async (response) => {
+                    const json = await response.json();
+                    if (response.status === 200) {
+                        showToast('Thank you! Your message has been sent successfully.', 'success');
+                        contactForm.reset();
+                    } else {
+                        console.error(json);
+                        showToast(json.message || 'Something went wrong. Please try again.', 'error');
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                    showToast('Network error. Please check your connection and try again.', 'error');
+                })
+                .finally(() => {
                     // Reset Button state
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnText;
-                }, 1500);
+                });
             } else {
                 showToast('Please correct the highlighted errors before submitting.', 'error');
             }
