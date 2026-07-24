@@ -2007,6 +2007,10 @@ section {
     gap: 12px;
 }
 
+.art-collage {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .collage-item {
     position: relative;
     border-radius: 8px;
