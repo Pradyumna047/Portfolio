@@ -297,12 +297,15 @@
                                 <span class="exp-duration">03/2024 - 09/2024</span>
                             </div>
                             <ul class="exp-points">
-                                <li>Achieved <span class="highlight">100% data integrity</span> between legacy and cloud systems by developing and managing GCP data models and schemas during a multi-terabyte Oracle/DB2/MySQL to BigQuery migration.</li>
+                                <li>Cut <span class="highlight">incremental load volume by 75%</span> by materializing dbt models as incremental with partition-based insert and a defined unique_key, so each table is maintained with controlled denormalization.</li>
+								<li>Prevented schema drift and referential failures from reaching production by configuring dbt generic tests in YAML (unique, not_null, accepted_values, relationships) across models covering every status enumeration.</li>
+								<li>Prevented reporting errors by writing singular dbt tests as SQL assertions for business rules that are not expressed by generic tests in dbt.</li>
+								<li>Achieved <span class="highlight">100% data integrity</span> between legacy and cloud systems by developing and managing GCP data models and schemas during a multi-terabyte Oracle/DB2/MySQL to BigQuery migration.</li>
                                 <li>Reduced ELT runtime from 3 hours to 10 minutes (a <span class="highlight">90% scalability gain</span>) by replacing legacy ETL logic with GCP-native dbt models.</li>
                                 <li>Reduced data loss by <span class="highlight">75%</span> and increased reporting completeness by engineering a late-arriving data recovery framework.</li>
 								<li>Reduced batch processing runtime on terabyte-scale batch datasets by building distributed PySpark pipelines on GCP Dataproc to ingest raw GCS files into BigQuery. </li>
                                 <li>Eliminated operational delays by building secure, SFTP-based automated file ingestion pipelines in Bash into GCS.</li>
-                                <li>Delivered projects on time by managing workflows using <span class="highlight">Agile methodologies</span> with cross-functional teams.</li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -328,6 +331,7 @@
                                 <li>Cut manual validation effort by <span class="highlight">80%</span> and eliminated inconsistencies by building an automated MySQL-based reconciliation framework into the CDC pipeline.</li>
                                 <li>Cut query runtime by <span class="highlight">over 50%</span> by refactoring multi-table SQL joins, aggregations, and window functions using indexing, CTEs, and execution-plan analysis.</li>
                                 <li>Secured <span class="highlight">95% customer retention</span> through data-driven restructuring of the upfront discount algorithm, analyzing time-series data of monthly transformed raw data to isolate key financial KPIs.</li>
+								<li>Delivered projects on time by managing workflows using <span class="highlight">Agile methodologies</span> with cross-functional teams.</li>
                             </ul>
                         </div>
                     </div>
