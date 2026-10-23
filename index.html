@@ -242,8 +242,9 @@
                         </div>
                         <ul class="skills-list">
                             <li><span class="skill-badge">ETL / ELT Architecture</span></li>
-                            <li><span class="skill-badge">dbt <span class="skill-level">(SQL models, Test, YAML configuration, Documentation)</span></li>
-							<li><span class="skill-badge">Ab initio <span class="skill-level">(Co>Op System, EME, GDE: psets, Reformat, Join, Rollup, Partitioning)</span></li> 
+                            <li><span class="skill-badge">dbt <span class="skill-level">(SQL models, Test, YAML configuration, Documentation)</span></span></li>
+							<li><span class="skill-badge">Ab initio <span class="skill-level">(Co>Op System, EME, GDE: psets, Reformat, Join, Rollup, Partitioning)</span></span></li> 
+							<li><span class="skill-badge">Databricks <span class="skill-level">(PySpark, Delta Lake, Unity Catalog, Lakeflow)</span></span></li> 
                             <li><span class="skill-badge">OLAP & OLTP Design</span></li>
                             <li><span class="skill-badge">Dimensional Modeling</span></li>
                             <li><span class="skill-badge">Data Reconciliation</span></li>
@@ -297,12 +298,15 @@
                                 <span class="exp-duration">03/2024 - 09/2024</span>
                             </div>
                             <ul class="exp-points">
-                                <li>Achieved <span class="highlight">100% data integrity</span> between legacy and cloud systems by developing and managing GCP data models and schemas during a multi-terabyte Oracle/DB2/MySQL to BigQuery migration.</li>
+                                <li>Cut <span class="highlight">incremental load volume by 75%</span> by materializing dbt models as incremental with partition-based insert and a defined unique_key, so each table is maintained with controlled denormalization.</li>
+								<li>Prevented schema drift and referential failures from reaching production by configuring dbt generic tests in YAML (unique, not_null, accepted_values, relationships) across models covering every status enumeration.</li>
+								<li>Prevented reporting errors by writing singular dbt tests as SQL assertions for business rules that are not expressed by generic tests in dbt.</li>
+								<li>Achieved <span class="highlight">100% data integrity</span> between legacy and cloud systems by developing and managing GCP data models and schemas during a multi-terabyte Oracle/DB2/MySQL to BigQuery migration.</li>
                                 <li>Reduced ELT runtime from 3 hours to 10 minutes (a <span class="highlight">90% scalability gain</span>) by replacing legacy ETL logic with GCP-native dbt models.</li>
                                 <li>Reduced data loss by <span class="highlight">75%</span> and increased reporting completeness by engineering a late-arriving data recovery framework.</li>
 								<li>Reduced batch processing runtime on terabyte-scale batch datasets by building distributed PySpark pipelines on GCP Dataproc to ingest raw GCS files into BigQuery. </li>
                                 <li>Eliminated operational delays by building secure, SFTP-based automated file ingestion pipelines in Bash into GCS.</li>
-                                <li>Delivered projects on time by managing workflows using <span class="highlight">Agile methodologies</span> with cross-functional teams.</li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -328,6 +332,7 @@
                                 <li>Cut manual validation effort by <span class="highlight">80%</span> and eliminated inconsistencies by building an automated MySQL-based reconciliation framework into the CDC pipeline.</li>
                                 <li>Cut query runtime by <span class="highlight">over 50%</span> by refactoring multi-table SQL joins, aggregations, and window functions using indexing, CTEs, and execution-plan analysis.</li>
                                 <li>Secured <span class="highlight">95% customer retention</span> through data-driven restructuring of the upfront discount algorithm, analyzing time-series data of monthly transformed raw data to isolate key financial KPIs.</li>
+								<li>Delivered projects on time by managing workflows using <span class="highlight">Agile methodologies</span> with cross-functional teams.</li>
                             </ul>
                         </div>
                     </div>
@@ -367,174 +372,197 @@
                 <div class="section-header text-center">
                     <h2 class="section-title">Technical Projects</h2>
                     <div class="section-underline"></div>
-                    <p class="section-subtitle">Explore my latest work across Data Engineering, ML/AI, and Analytics</p>
+                    <p class="section-subtitle">Data engineering, ML and GenAI projects, each with code you can open</p>
                 </div>
 
                 <!-- Filter Controls -->
                 <div class="project-filters" id="project-filters">
                     <button class="filter-btn active" data-filter="all" id="filter-btn-all">All</button>
                     <button class="filter-btn" data-filter="de" id="filter-btn-de">Data Engineering</button>
-                    <button class="filter-btn" data-filter="ai-ml" id="filter-btn-aiml">ML & AI</button>
+                    <button class="filter-btn" data-filter="ai-ml" id="filter-btn-aiml">ML &amp; AI</button>
                     <button class="filter-btn" data-filter="analytics" id="filter-btn-analytics">Cloud Analytics</button>
                 </div>
 
                 <!-- Projects Grid -->
                 <div class="projects-grid" id="projects-grid">
-                    <!-- Project 1: Yojana Setu -->
-                    <div class="project-card" data-category="ai-ml de analytics" id="proj-yojana-setu">
-                        <div class="project-banner bg-grad-cyan-indigo">
-                            <i class="fa-solid fa-robot banner-icon"></i>
-                            <div class="project-category-tag">GenAI & RAG</div>
+
+                    <!-- Project 1: Telco Lakehouse -->
+                    <div class="project-card" data-category="de analytics" id="proj-telco-lakehouse">
+                        <div class="project-banner has-img">
+                            <img src="images/projects/telco-lakehouse.jpg" alt="Telco Lakehouse: Databricks bronze, silver and gold pipeline" loading="lazy">
+                            <div class="project-category-tag">Data Engineering</div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-card-title">Yojana Setu - GenAI Welfare Assistant</h3>
+                            <h3 class="project-card-title">Telco Lakehouse on Databricks</h3>
                             <p class="project-card-desc">
-                                Built a zero-hallucination RAG assistant for welfare eligibility checks by combining Vertex AI Agent Builder with Gemini Pro on complex, multi-criteria government scheme data.
+                                Medallion lakehouse for a simulated German mobile operator: three defective source feeds turned into four business-ready gold tables with Auto Loader and Lakeflow Declarative Pipelines.
                             </p>
                             <ul class="project-highlights">
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Programmed edge IP geolocation that auto-detects user state and translates results.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Deployed containerized microservices on Cloud Run.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Built async audit-logging pipeline streaming to GCS.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Billed each call against the tariff valid at call time with an <span class="highlight">SCD Type 2</span> customer dimension sequenced on CRM event time.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Added a table-level data quality gate (reconciliation, freshness, one open SCD2 row per key) on top of row-level expectations.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Masked PII for analysts with Unity Catalog and deployed through Asset Bundles and GitHub Actions CI.</span></li>
                             </ul>
                             <div class="project-tech-stack">
-                                <span class="tech-tag">GCP Vertex AI</span>
-                                <span class="tech-tag">Cloud Run</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">RAG</span>
+                                <span class="tech-tag">Databricks</span>
+                                <span class="tech-tag">PySpark</span>
+                                <span class="tech-tag">Delta Lake</span>
+                                <span class="tech-tag">Unity Catalog</span>
+                                <span class="tech-tag">Lakeflow</span>
+                                <span class="tech-tag">GitHub Actions</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Pradyumna047/yojana-setu" target="_blank" rel="noopener" class="proj-link-btn" id="link-yojana-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
-                                <a href="#" class="proj-link-btn disabled" id="link-yojana-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                                <a href="https://github.com/Pradyumna047/Telco_Lakehouse" target="_blank" rel="noopener" class="proj-link-btn" id="link-telco-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
                             </div>
                         </div>
                     </div>
-					                    <!-- Project 2: Tax_easy -->
-                    <div class="project-card" data-category="ai-ml de analytics" id="proj-tax-easy">
-                        <div class="project-banner bg-grad-cyan-indigo">
-                            <i class="fa-solid fa-robot banner-icon"></i>
-                            <div class="project-category-tag">GenAI & RAG</div>
+
+                    <!-- Project 2: SteuerAssistent -->
+                    <div class="project-card" data-category="ai-ml de" id="proj-tax-easy">
+                        <div class="project-banner has-img">
+                            <img src="images/projects/steuerassistent.jpg" alt="SteuerAssistent: RAG chatbot for German tax law" loading="lazy">
+                            <div class="project-category-tag">GenAI &amp; RAG</div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-card-title">Tax_easy - RAG SteuerAssistent for German Tax Law</h3>
+                            <h3 class="project-card-title">SteuerAssistent: RAG for German Tax Law</h3>
                             <p class="project-card-desc">
-                                Built a source-grounded RAG assistant for German tax law by indexing 818 statute sections from the Federal Ministry of Justice's official XML, so every answer cites the exact paragraph it came from. Engineered a backend data pipeline to analyse user interaction with the assistant.
+                                German tax law chatbot that cites the exact § or court ruling behind every answer, grounded in EStG, UStG and AO from gesetze-im-internet.de and Bundesfinanzhof rulings.
                             </p>
                             <ul class="project-highlights">
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Covers three complete German tax laws, taken straight from the government's official website.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Shows the exact legal paragraph behind every answer, with a link to check it. it also declines request when Information is uncovered instead of guessing.</li>
-								<li><i class="fa-solid fa-check text-accent icon-space"></i> Asks user details so the answer fits your situation.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Deployed single Docker image serving React SPA and FastAPI.</li>
-								<li><i class="fa-solid fa-check text-accent icon-space"></i> Architecture is flexible to switch between open model LLMs and closed model LLMs.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Limited answers to retrieved context with Gemini at temperature 0.1, linking every citation to the official source.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Made ingestion safe to re-run: laws are upserted without duplicates and only new rulings are added.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Bilingual React UI on FastAPI in one Docker image; usage analytics store no IP addresses or account IDs.</span></li>
                             </ul>
                             <div class="project-tech-stack">
-								<span class="tech-tag">Python </span>
-								<span class="tech-tag">TypeScript </span>
-                                <span class="tech-tag">React </span>
-                                <span class="tech-tag">Google Gemini </span>
+                                <span class="tech-tag">Gemini</span>
+                                <span class="tech-tag">ChromaDB</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
                                 <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">FastAPI </span>
-                                <span class="tech-tag">ChromaDB </span>
-                                <span class="tech-tag">RAG</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/Pradyumna047/Tax_easy" target="_blank" rel="noopener" class="proj-link-btn" id="link-tax-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
-                                <a href="#" class="proj-link-btn disabled" id="link-tax-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                                <a href="https://tax-easy.onrender.com" target="_blank" rel="noopener" class="proj-link-btn" id="link-tax-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: Neural Logic Synthesis -->
-                    <div class="project-card" data-category="ai-ml" id="proj-neural-logic">
-                        <div class="project-banner bg-grad-purple-pink">
-                            <i class="fa-solid fa-microchip banner-icon"></i>
-                            <div class="project-category-tag">Deep Learning</div>
+                    <!-- Project 3: Fraud Detection -->
+                    <div class="project-card" data-category="ai-ml" id="proj-fraud-detection">
+                        <div class="project-banner has-img">
+                            <img src="images/projects/fraud-detection.jpg" alt="Fraud Detection: explainable XGBoost with SHAP" loading="lazy">
+                            <div class="project-category-tag">ML &amp; Explainable AI</div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-card-title">Neural Logic Synthesis</h3>
+                            <h3 class="project-card-title">Fraud Detection: Explainable XGBoost</h3>
                             <p class="project-card-desc">
-                                Replicated Boolean logic gate behavior with 100% accuracy on all truth tables by designing and training modular artificial neural networks (ANN) in TensorFlow and Keras.
+                                AML-style fraud detection on 590,540 real IEEE-CIS transactions, with SHAP explanations for every flagged transaction and a hybrid rule engine.
                             </p>
                             <ul class="project-highlights">
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Replicated Boolean logic gate behavior with 100% accuracy.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Built functional digital multiplexer by composing networks.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Scripted gate-to-circuit signal flow logic in NumPy.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Reached <span class="highlight">0.938 ROC-AUC</span> and <span class="highlight">0.629 PR-AUC</span> (18× the baseline) with 40+ engineered features.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Caught <span class="highlight">75.1% of fraud</span> at a 5.1% false-positive rate by tuning the threshold to analyst workload.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Built a Streamlit app for live scoring, per-transaction SHAP and threshold tuning.</span></li>
                             </ul>
                             <div class="project-tech-stack">
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">Keras API</span>
-                                <span class="tech-tag">NumPy</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Supervised Learning</span>
+                                <span class="tech-tag">XGBoost</span>
+                                <span class="tech-tag">SHAP</span>
+                                <span class="tech-tag">Scikit-Learn</span>
+                                <span class="tech-tag">LightGBM</span>
+                                <span class="tech-tag">Streamlit</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Pradyumna047/Data_rep/tree/main/ML" target="_blank" rel="noopener" class="proj-link-btn" id="link-neural-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
-                                <a href="#" class="proj-link-btn disabled" id="link-neural-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                                <a href="https://github.com/Pradyumna047/Fraud_detection" target="_blank" rel="noopener" class="proj-link-btn" id="link-fraud-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3: Subscription Analytics -->
-                    <div class="project-card" data-category="de analytics" id="proj-sub-analytics">
-                        <div class="project-banner bg-grad-emerald-teal">
-                            <i class="fa-solid fa-chart-line banner-icon"></i>
-                            <div class="project-category-tag">Data Infrastructure</div>
+                    <!-- Project 4: Yojana Setu -->
+                    <div class="project-card" data-category="ai-ml analytics" id="proj-yojana-setu">
+                        <div class="project-banner has-img">
+                            <img src="images/projects/yojana-setu.jpg" alt="Yojana Setu: welfare scheme assistant in five Indian languages" loading="lazy">
+                            <div class="project-category-tag">GenAI &amp; RAG</div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-card-title">End-to-End Subscription Analytics</h3>
+                            <h3 class="project-card-title">Yojana Setu: GenAI Welfare Assistant</h3>
                             <p class="project-card-desc">
-                                Modeled a simulated B2C subscription dataset by architecting a full-stack ELT pipeline using dbt and DuckDB as an OLAP engine, topped with interactive reports.
+                                Conversational welfare-scheme eligibility checks for Indian citizens, grounded in official policy documents through Vertex AI Search. Built for Google Cloud Gen AI Academy APAC.
                             </p>
                             <ul class="project-highlights">
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Uncovered <span class="highlight">35% revenue leakage</span> by modeling MRR & churn.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Guaranteed <span class="highlight">100% data reliability</span> using automated dbt schema tests.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Quantified <span class="highlight">€2.8M potential revenue impact</span> via Power BI & DAX.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Merged age, income, BPL, farmer status and state into each query for user-specific eligibility answers.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Answered in Hindi, Marathi, Kannada, Tamil or English based on the user's detected state.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Logged anonymised queries to Cloud Storage for an admin dashboard of demand by scheme and state.</span></li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Vertex AI Search</span>
+                                <span class="tech-tag">Cloud Run</span>
+                                <span class="tech-tag">Cloud Storage</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Pradyumna047/yojana-setu" target="_blank" rel="noopener" class="proj-link-btn" id="link-yojana-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
+                                <a href="https://yojana-setu-app-998000871186.us-central1.run.app/" target="_blank" rel="noopener" class="proj-link-btn" id="link-yojana-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: E-Commerce Churn Analytics -->
+                    <div class="project-card" data-category="de analytics ai-ml" id="proj-ecommerce-churn">
+                        <div class="project-banner has-img">
+                            <img src="images/projects/ecommerce-churn-analytics.jpg" alt="E-Commerce Churn Analytics: dbt layers to Power BI" loading="lazy">
+                            <div class="project-category-tag">Analytics Engineering</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-card-title">E-Commerce Churn Analytics</h3>
+                            <p class="project-card-desc">
+                                Churn analytics for 5,000 customers in five EU markets, from raw data through dbt on DuckDB to a 6-page Power BI dashboard.
+                            </p>
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Modelled staging, mart and aggregation layers in dbt, covered by <span class="highlight">26 tests</span>.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Predicted churn with an <span class="highlight">AUC of 0.95</span> on 1,000 held-out customers.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Built DAX measures for churn by country, segment, category and payment method.</span></li>
                             </ul>
                             <div class="project-tech-stack">
                                 <span class="tech-tag">dbt</span>
                                 <span class="tech-tag">DuckDB</span>
                                 <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-Learn</span>
                                 <span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">DAX</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Pradyumna047/Ecommerce-churn-analytics" target="_blank" rel="noopener" class="proj-link-btn" id="link-sub-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
-                                <a href="#" class="proj-link-btn disabled" id="link-sub-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
+                                <a href="https://github.com/Pradyumna047/Ecommerce-churn-analytics" target="_blank" rel="noopener" class="proj-link-btn" id="link-ecom-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 4: Retail Demand Forecasting -->
+                    <!-- Project 6: Retail Demand Forecasting -->
                     <div class="project-card" data-category="ai-ml analytics" id="proj-demand-forecasting">
-                        <div class="project-banner bg-grad-blue-violet">
-                            <i class="fa-solid fa-store banner-icon"></i>
+                        <div class="project-banner has-img">
+                            <img src="images/projects/retail-demand-forecasting.jpg" alt="Retail Demand Forecasting: SARIMA vs Random Forest" loading="lazy">
                             <div class="project-category-tag">Time Series ML</div>
                         </div>
                         <div class="project-body">
-                            <h3 class="project-card-title">Retail Demand Forecasting Pipeline</h3>
+                            <h3 class="project-card-title">Retail Demand Forecasting</h3>
                             <p class="project-card-desc">
-                                Predicted daily sales by building a modular, production-grade time-series forecasting pipeline on 5 years of historical data using Random Forest and SARIMA.
+                                Daily item-level sales forecasting on 5 years of Kaggle retail data, comparing SARIMA with a Random Forest in a modular Python pipeline.
                             </p>
                             <ul class="project-highlights">
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Achieved a <span class="highlight">15% MAPE</span> via advanced rolling/lag features.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Eliminated lookahead bias with strict temporal splits.</li>
-                                <li><i class="fa-solid fa-check text-accent icon-space"></i> Run stationarity checks using Augmented Dickey-Fuller tests.</li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Reached <span class="highlight">15% MAPE</span> with 1/7/30-day lags, a 7-day rolling mean and calendar features.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Prevented lookahead bias with a strict 30-day date-cutoff holdout.</span></li>
+                                <li><i class="fa-solid fa-check text-accent icon-space"></i> <span>Tested stationarity with the Augmented Dickey-Fuller test before fitting SARIMA.</span></li>
                             </ul>
                             <div class="project-tech-stack">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Scikit-Learn</span>
                                 <span class="tech-tag">Statsmodels</span>
                                 <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Time-Series</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/Pradyumna047/demand_forecasting_project" target="_blank" rel="noopener" class="proj-link-btn" id="link-retail-code"><i class="fa-brands fa-github icon-space"></i> Code</a>
-                                <a href="#" class="proj-link-btn disabled" id="link-retail-live"><i class="fa-solid fa-arrow-up-right-from-square icon-space"></i> Live Demo</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -550,41 +578,54 @@
                             <div class="section-underline"></div>
                         </div>
                         <div class="certifications-grid">
-                            <div class="cert-card">
+							<a class="cert-card" href="https://credentials.databricks.com/e38d8c41-cb10-40f0-b283-38e8a1a3a350#acc.kuKFDq80" target="_blank" rel="noopener" aria-label="View DevOps for Data Engineering credential">
+                                <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4 class="cert-name">DevOps for Data Engineering</h4>
+                                    <p class="cert-issuer">Databricks Academy • 10/2026</p>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon"></i>
+                            </a>
+                            <a class="cert-card" href="https://www.credly.com/badges/9b3f6e8e-e1b1-46ba-8846-8467c4b84c1b/linked_in_profile" target="_blank" rel="noopener" aria-label="View Google Cloud Data Analytics credential">
                                 <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
                                 <div class="cert-info">
                                     <h4 class="cert-name">Google Cloud Data Analytics</h4>
                                     <p class="cert-issuer">Google • 07/2026</p>
                                 </div>
-                            </div>
-                            <div class="cert-card">
+                                <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon"></i>
+                            </a>
+                            <a class="cert-card" href="https://drive.google.com/file/d/1F906_IscJImCi8Gz-kdPG_HDRs6Ur7-M/view?usp=drivesdk" target="_blank" rel="noopener" aria-label="View Data Science Essentials in Python credential">
                                 <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
                                 <div class="cert-info">
                                     <h4 class="cert-name">Data Science Essentials in Python</h4>
                                     <p class="cert-issuer">Cisco Networking Academy • 02/2026</p>
                                 </div>
-                            </div>
-                            <div class="cert-card">
+                                <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon"></i>
+                            </a>
+                            <a class="cert-card" href="https://drive.google.com/file/d/10BqzOYn0v7coE8rNSVyReYj3HHsG7RKq/view?usp=drivesdk" target="_blank" rel="noopener" aria-label="View Associate Cloud Engineer (GCP) credential">
                                 <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
                                 <div class="cert-info">
                                     <h4 class="cert-name">Associate Cloud Engineer (GCP)</h4>
                                     <p class="cert-issuer">Google • 03/2024</p>
                                 </div>
-                            </div>
-                            <div class="cert-card">
+                                <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon"></i>
+                            </a>
+                            <a class="cert-card" href="https://drive.google.com/file/d/1Z_eJIKWygKJ9SmRLE3BYPGJh9LAVZu7E/view?usp=drivesdk" target="_blank" rel="noopener" aria-label="View Full Stack Automation credential">
                                 <div class="cert-icon-box"><i class="fa-solid fa-award"></i></div>
                                 <div class="cert-info">
                                     <h4 class="cert-name">Full Stack Automation</h4>
                                     <p class="cert-issuer">Accenture • 07/2021</p>
                                 </div>
-                            </div>
-                            <div class="cert-card">
+                                <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon"></i>
+                            </a>
+                            <a class="cert-card" href="https://drive.google.com/file/d/1anEDLPiUiKZuoq3xUJy2SjBOGDSLpZta/view?usp=drivesdk" target="_blank" rel="noopener" aria-label="View IJRASET Scientific Publication credential">
                                 <div class="cert-icon-box"><i class="fa-solid fa-newspaper"></i></div>
                                 <div class="cert-info">
                                     <h4 class="cert-name">IJRASET Scientific Publication</h4>
                                     <p class="cert-issuer">Scientific Journal (Aquabin IoT Waste Management) • 09/2020</p>
                                 </div>
-                            </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -635,6 +676,8 @@
                     </div>
                 </div>
             </div>
+        </section>
+
         <!-- Hobbies Section -->
         <section class="hobbies-section" id="hobbies">
             <div class="container scroll-reveal">
